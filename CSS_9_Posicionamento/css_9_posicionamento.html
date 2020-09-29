@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_9_Posicionamento</title>
+
+    <style>
+        div.estatico {
+          position: static;
+          border: 3px solid #73AD21;
+        }
+
+        div.pegajoso {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        padding: 5px;
+        background-color: #cae8ca;
+        border: 2px solid #4CAF50;
+        }
+
+        div.relativo {
+        position: relative;
+        left: 30px;
+        border: 3px solid #101aaf;
+        }
+
+        div.fixo {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+        border: 3px solid #720c0c;
+        }
+
+        img {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+        }
+
+        </style>
+</head>
+<body>
+    <div class="geral">
+        <h2>A propriedade position</h2>
+        <ul>
+            <li>static</li>
+            <li>relative</li>
+            <li>fixed</li>
+            <li>absolute</li>
+            <li>sticky</li>
+        </ul>
+
+        <h2>sticky - pegajoso</h2>          <!-- colocar no inicio da página -->
+        <p>Fica fixo dependendo da rolagem</p>
+        <p>Obs. Depende do navegador e sua versão</p>
+        <div class="pegajoso">
+            Este div irá colar em você. Hehehehe!
+        </div>
+
+        <h2>static (estático) - É o padrão</h2>
+        <p>está sempre posicionado de acordo com o fluxo normal da página</p>
+        <div class="estatico">
+            Este div está com a position static
+        </div>
+
+        <h2>relative - Relativo</h2>
+        <p>É posicionado em relação à sua posição normal</p>
+        <div class="relativo">
+            Este div está com a position relative
+        </div>
+
+        <h2>fixed - fixo</h2>
+        <p>Estará sempre fixo no mesmo lugar</p>
+        <div class="fixo">
+            Este div está fixado no final da página
+        </div>
+        
+        <h2>z-index - Sobreposto</h2>
+        <img src="bike-riding-5557589_640.png" alt="Ciclista">
+        <p>z-index - especifica a ordem de pilha. Quem vai sobrepor</p>
+        <p>Ajustamos o valor do z-index para ajustar a posição </p>
+
+    </div>
+</body>
+</html>
