@@ -37,7 +37,8 @@
 
         <p id="conteudo">O conteúdo desse parágrafo será alterado.</p>
 
-        <button type="button" onclick='document.getElementById("conteudo").innerHTML = "JavaScript domina!"'>Clique!</button>
+        <button type="button" onclick='document.getElementById("conteudo").innerHTML = "JavaScript domina!"'>
+            Clique!</button>
     </div>
 
     <hr>
@@ -46,11 +47,23 @@
         <h2>Alterando valores de atributos</h2>
         <p>Alterando o atributo <code class="codigos">src</code> atributo (fonte) de uma <code class="codigos">&lt;img&gt;</code></p>
         
-        <button onclick="document.getElementById('lampada').src='lampadaOn.gif'">Acende</button>
+        <button onclick="on()">Acende</button>
 
-        <img id="lampada" src="lampadaOff.gif" style="width:100px">
+        <img id="lampada" src="lampadaOff.gif" style="width:100px"
+        onmouseover="on()" onmouseout="off()">
 
-        <button onclick="document.getElementById('lampada').src='lampadaOff.gif'">Apaga</button>
+        <button onclick="off()">Apaga</button>
+
+        <script>
+            function on() {
+                document.getElementById("lampada").src="lampadaOn.gif";
+            }
+
+            function off() {
+                document.getElementById("lampada").src="lampadaOff.gif";
+            }
+        </script>
+        
     </div>
 
     <hr>
